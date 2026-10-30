@@ -1,0 +1,19 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://acheilegal4.com.br%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^ index.php [L]
+Options -Indexes
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+# php -- BEGIN cPanel-generated handler, do not edit
+# Este domínio herda o pacote “PHP”.
+# php -- END cPanel-generated handler, do not edit

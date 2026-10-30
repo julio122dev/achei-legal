@@ -1,0 +1,39 @@
+# Banco de dados (senha do ADM em hash, App Secret da Shopee, estatísticas)
+storage/*
+!storage/.htaccess
+!storage/.gitkeep
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Fotos e vídeos enviados pelo painel
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Logs do servidor (mostram caminhos internos da hospedagem)
+error_log
+*.log
+
+# Arquivos gerados pela HostGator / cPanel
+.htaccess.phpupgrader*
+.well-known/
+cgi-bin/
+
+# Segredos
+.env
+.env.*
+*credentials*
+
+# Backups
+*.zip
+*.rar
+*.bak
+*.sql
+
+# Sistema / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
